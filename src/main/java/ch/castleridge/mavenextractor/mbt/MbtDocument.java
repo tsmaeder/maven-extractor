@@ -1,0 +1,20 @@
+/**
+ * Copyright 2026 by Castle Ridge Software GmbH
+ *
+ * Author: Thomas Mäder, Castle Ridge Software
+ *
+ */
+package ch.castleridge.mavenextractor.mbt;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Root Metals-schema {@code mbt.json} document.
+ */
+public final class MbtDocument {
+    public List<MbtDependencyModule> dependencyModules = new ArrayList<>();
+    public Map<String, MbtNamespace> namespaces = new LinkedHashMap<>();
+}

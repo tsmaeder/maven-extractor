@@ -1,0 +1,13 @@
+/**
+ * Copyright 2026 by Castle Ridge Software GmbH
+ *
+ * Author: Thomas Mäder, Castle Ridge Software
+ *
+ */
+package ch.castleridge.mavenextractor.maven.generated;
+
+/** Whether a generated root belongs to the main or test namespace. */
+public enum GeneratedSourceScope {
+    MAIN,
+    TEST
+}
