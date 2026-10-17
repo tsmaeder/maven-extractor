@@ -1,4 +1,4 @@
-# Maven Importer: Maven Workspaces to mbt.json.maven
+# Maven Extractor: Maven Workspaces to mbt.json.maven
 
 ## tl;dr
 
@@ -14,9 +14,9 @@ The language server does not read build files. It only understands
 workspace description with external dependency jars and *namespaces* (compilable units). For Maven
 workspaces we need a reliable way to produce that file from `pom.xml` trees.
 
-`maven-extractor` is the Maven producer. It packages as `maven-extractor.jar` (shaded, main class
-`ch.castleridge.mavenextractor.Main`) and is copied next to the language server artifact at
-build time. Given a directory, it finds every `pom.xml`, imports each distinct Maven reactor once,
+`maven-extractor` is the Maven producer. It packages as a shaded jar (main class
+`ch.castleridge.mavenextractor.Main`). java-ls resolves it as a Maven dependency and copies it next
+to the language server artifact as `maven-extractor.jar` at package time. Given a directory, it finds every `pom.xml`, imports each distinct Maven reactor once,
 and emits one fragment (default: `.javals/mbt.json.maven` under that directory). java-ls owns
 combining fragments from all supported build systems into `.javals/mbt.json`.
 
