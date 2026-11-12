@@ -13,6 +13,13 @@
   <name>maven-extractor</name>
   <description>Executable jar for Maven classpath / MBT extraction</description>
 
+  <scm>
+    <connection>scm:git:https://github.com/tsmaeder/maven-extractor.git</connection>
+    <developerConnection>scm:git:https://github.com/tsmaeder/maven-extractor.git</developerConnection>
+    <url>https://github.com/tsmaeder/maven-extractor</url>
+    <tag>HEAD</tag>
+  </scm>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>25</maven.compiler.release>
